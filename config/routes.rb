@@ -1,4 +1,12 @@
 Puebla::Application.routes.draw do
+ 
+
+  root to: 'static_pages#inicio'
+  match '/signup',  to: 'users#new'
+  match '/ayuda',    to: 'static_pages#ayuda'
+  match '/nosotros',   to: 'static_pages#nosotros'
+  match '/contacto', to: 'static_pages#contacto'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
