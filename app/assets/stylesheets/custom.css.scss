@@ -151,9 +151,9 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  padding: 10px;
+  padding: 40px;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   @include box_sizing;
 }
 
@@ -169,3 +169,4 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
+
