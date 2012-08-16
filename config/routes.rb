@@ -1,9 +1,10 @@
 Puebla::Application.routes.draw do
  
-
+  resources :users
   get "users/new"
 
   root to: 'static_pages#inicio'
+  
   match '/signup',  to: 'users#new'
   match '/ayuda',    to: 'static_pages#ayuda'
   match '/nosotros',   to: 'static_pages#nosotros'
