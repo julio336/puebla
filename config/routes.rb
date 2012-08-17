@@ -1,13 +1,18 @@
 Puebla::Application.routes.draw do
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  
+ 
+resources :users
+resources :sessions, only: [:new, :create, :destroy]
+
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+  get "users/new"
+
   root to: 'static_pages#inicio'
+  
   match '/ayuda',    to: 'static_pages#ayuda'
-  match '/nosotros',  to: 'static_pages#nosotros'
+  match '/nosotros',   to: 'static_pages#nosotros'
   match '/contacto', to: 'static_pages#contacto'
   
   # The priority is based upon order of creation:
